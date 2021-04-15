@@ -6,4 +6,4 @@ link:
 http://automationpractice.com/index.php
 
 description of test:
-verify if the phone number on the website is correct (left, top corner)
+> verify if the phone number on the website is correct (left, top corner)
