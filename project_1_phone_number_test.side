@@ -1,0 +1,135 @@
+{
+  "id": "0e40e4e3-8f0b-473b-a9d3-a8071935e866",
+  "version": "2.0",
+  "name": "project_1_phone_number_test",
+  "url": "http://automationpractice.com/index.php",
+  "tests": [{
+    "id": "99686cc0-b0e5-4151-8661-aabc482931b2",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "5a720772-afe0-4400-8f3f-2079a8443a23",
+    "name": "project_1_phone_number_test_v8",
+    "commands": [{
+      "id": "0d601008-85b1-4c46-81b1-a628bc17d869",
+      "comment": "",
+      "command": "//store",
+      "target": "0123-456-789",
+      "targets": [],
+      "value": "varCorrectePhoneNumber"
+    }, {
+      "id": "77bc320a-a283-4f6e-80ba-844407e0a8e3",
+      "comment": "",
+      "command": "//store",
+      "target": "0123-456-111",
+      "targets": [],
+      "value": "varCheckPhoneNumber"
+    }, {
+      "id": "18881c97-8b04-4552-9741-f67210d04081",
+      "comment": "",
+      "command": "open",
+      "target": "http://automationpractice.com/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd93f581-a81d-43c2-9942-c0ae8c0b132b",
+      "comment": "",
+      "command": "if",
+      "target": "document.body.contains(document.getElementsByClassName(\"shop-phone\")[0])",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06f826ff-504e-4d3a-afe4-40ece6335687",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//span[@class=\"shop-phone\"]/strong",
+      "targets": [],
+      "value": "${varCheckPhoneNumber}"
+    }, {
+      "id": "6af8b94b-951b-4b6b-a847-5eb9a26f40a4",
+      "comment": "",
+      "command": "echo",
+      "target": "checke phone number ${varCheckPhoneNumber}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5eb328e-15e2-4627-bb9d-7a6d9dc87e1a",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff3997aa-7cae-4eb4-ace7-32990de62d3c",
+      "comment": "",
+      "command": "close",
+      "target": "http://automationpractice.com/index.php",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ab967163-5ce1-470e-8d41-448babef2759",
+    "name": "project_1_phone_number_test_9",
+    "commands": [{
+      "id": "2188c3b2-1fc5-4e05-8926-aef5ce7b7ecf",
+      "comment": "correct phone number",
+      "command": "store",
+      "target": "0123-456-789",
+      "targets": [],
+      "value": "varCheckPhoneNumber"
+    }, {
+      "id": "5eea0ab5-d3d8-4fe5-a582-cb47d4a579fb",
+      "comment": "",
+      "command": "run",
+      "target": "project_1_phone_number_test_v8",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b6d3b306-ef44-43fc-af59-ae6ea7dcd81b",
+    "name": "project_1_phone_number_test_10",
+    "commands": [{
+      "id": "be192f71-688a-4915-8cbd-b2575ae8d9c7",
+      "comment": "incorrect phone number",
+      "command": "store",
+      "target": "0123-456-111",
+      "targets": [],
+      "value": "varCheckPhoneNumber"
+    }, {
+      "id": "5562e764-d168-48e5-be0a-ff063c981cc8",
+      "comment": "",
+      "command": "run",
+      "target": "project_1_phone_number_test_v8",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6ae34c2d-b205-4e6d-9fe0-a61668a8f851",
+    "name": "project_1_phone_number_test_11",
+    "commands": [{
+      "id": "1dcab5f9-fe85-4641-ad2b-7adf770d693d",
+      "comment": "incorrect phone number",
+      "command": "store",
+      "target": "0123-456-222",
+      "targets": [],
+      "value": "varCheckPhoneNumber"
+    }, {
+      "id": "46770e7a-4e2a-43c1-884b-fb0cc5f91496",
+      "comment": "",
+      "command": "run",
+      "target": "project_1_phone_number_test_v8",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d18ba04c-17af-47e6-83b5-ff4423243056",
+    "name": "project_1_if_suite_check_phone_number",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ab967163-5ce1-470e-8d41-448babef2759", "b6d3b306-ef44-43fc-af59-ae6ea7dcd81b", "6ae34c2d-b205-4e6d-9fe0-a61668a8f851"]
+  }],
+  "urls": ["http://automationpractice.com/index.php"],
+  "plugins": []
+}
